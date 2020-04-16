@@ -18,10 +18,23 @@ try {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
 
+if (isset($_GET['seriesOrder'])) {
+    $order = $_GET['seriesOrder'];
+
+    if ($order == 'title') {
+        $seriesDATA = 'SELECT * FROM series';
+    }
+    if ($order = 'rating') {
+        $seriesDATA = 'SELECT * FROM series ORDER BY rating';
+    } else {
+        $seriesDATA = 'SELECT * FROM series';
+    }
+}
+
 
 echo "<h1>Welcome, this is your $db control panel, change whatever you like. </h1>";
 
-$seriesDATA = 'SELECT * FROM series';
+//$seriesDATA = 'SELECT * FROM series';
 
 $seriesQuery = $pdo->query($seriesDATA);
 $series = $seriesQuery->fetchALL(PDO::FETCH_ASSOC);
