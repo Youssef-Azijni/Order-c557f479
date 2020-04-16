@@ -24,7 +24,7 @@ if (isset($_GET['seriesOrder'])) {
     if ($order == 'title') {
         $seriesDATA = 'SELECT * FROM series';
     }
-    if ($order = 'rating') {
+    if ($order == 'rating') {
         $seriesDATA = 'SELECT * FROM series ORDER BY rating';
     } else {
         $seriesDATA = 'SELECT * FROM series';
@@ -34,7 +34,6 @@ if (isset($_GET['seriesOrder'])) {
 
 echo "<h1>Welcome, this is your $db control panel, change whatever you like. </h1>";
 
-//$seriesDATA = 'SELECT * FROM series';
 
 $seriesQuery = $pdo->query($seriesDATA);
 $series = $seriesQuery->fetchALL(PDO::FETCH_ASSOC);
@@ -43,8 +42,8 @@ echo "
 <h2>Series </h2>
 <table>
     <tr>
-        <td style="font - weight: bold;"> Title </td>
-        <td style="font - weight: bold'> Title </td>
+        <td> Title </td>
+        <td> Title </td>
     <tr>
 ';
 

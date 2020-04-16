@@ -18,7 +18,7 @@ try {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-echo "<p><a href="index . php"> Go back! </a> </p>";
+echo "<p><a href='\index.php'> Go back! </a> </p>";
 
 $id = $_GET['id'];
 $seriesData = "SELECT * FROM series WHERE id='$id'";

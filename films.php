@@ -1,3 +1,4 @@
+//co
 <?php
 $host = '127.0.0.1:3306';
 $db = 'netland';
@@ -35,7 +36,8 @@ foreach ($movies as $row) {
     echo '<p>' . $row['description'] . '<p>';
 
     $videoID = $row["youtube_trailer_id"];
-    echo("<iframe width=\"1051\" height=\"600\" src=\"https://www.youtube.com/embed/CryXRQ2WDm4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe> ");
+    echo("<iframe width=\"1051\" height=\"600\" src=\"https://www.youtube.com/embed/CryXRQ2WDm4\" frameborder=\"0\"
+    allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe> ");
 
 }
 
